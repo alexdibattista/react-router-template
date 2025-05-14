@@ -1,0 +1,42 @@
+integrated
+- Typescript
+- React
+- React Router
+- pnpm
+- Docker
+- Biome
+
+Not integrated
+- design system
+    - components
+    - tailwind css
+    - shadcn/ui
+    - radix ui
+- husky
+- Testing
+    - Jest
+    - React Testing Library
+    - Cypress
+    - playwright
+- Clerk Authentication
+- Maintenance screen
+- User Wrapper
+- Internationalization
+- Error Handling
+- React Query
+- Folder Structure
+- CI/CD
+    - Github Actions
+      - Linting - https://biomejs.dev/guides/getting-started/
+      - Testing
+      - Building
+      - Deploying
+        - GCP Cloud Run
+- Analytics
+    - Google Analytics
+    - Sentry
+    - Posthog
+- Monitoring
+    - Sentry
+    - Posthog
+- Logging
