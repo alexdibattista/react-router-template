@@ -5,6 +5,9 @@ integrated
 - pnpm
 - Docker
 - Biome
+- storybook
+- tailwind
+- shadcn
 
 Not integrated
 - design system
