@@ -1,0 +1,29 @@
+/* Additional styling for Sidebar stories */
+.storybook-sidebar-container {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.storybook-sidebar-example {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.storybook-sidebar-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.storybook-sidebar-content {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+/* These styles are only for documentation purposes and don't affect the actual sidebar component */

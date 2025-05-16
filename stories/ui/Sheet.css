@@ -1,0 +1,21 @@
+/* Additional styling for Sheet stories */
+.storybook-sheet-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.storybook-sheet-example {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.storybook-sheet-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* These styles are only for documentation purposes and don't affect the actual sheet component */
