@@ -8,10 +8,10 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import { ModeToggle } from "./components/mode-toggle";
 import { ThemeProvider } from "./components/theme-provider";
 import "./app.css";
 import { AppSidebar } from "./components/app-sidebar";
+import { Header } from "./components/header";
 import { SidebarProvider, SidebarTrigger } from "./components/ui/sidebar";
 
 export const links: Route.LinksFunction = () => [
@@ -40,8 +40,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<ThemeProvider defaultTheme="system" storageKey="ch-theme">
 					<SidebarProvider defaultOpen={false}>
 						<AppSidebar />
-						<main>
-							<SidebarTrigger />
+						<main className="mt-2">
+							<Header />
 							{children}
 						</main>
 					</SidebarProvider>
