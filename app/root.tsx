@@ -11,6 +11,8 @@ import type { Route } from "./+types/root";
 import { ModeToggle } from "./components/mode-toggle";
 import { ThemeProvider } from "./components/theme-provider";
 import "./app.css";
+import { AppSidebar } from "./components/app-sidebar";
+import { SidebarProvider, SidebarTrigger } from "./components/ui/sidebar";
 
 export const links: Route.LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,10 +38,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 			</head>
 			<body>
 				<ThemeProvider defaultTheme="system" storageKey="ch-theme">
-					<div className="fixed top-0 right-0">
-						<ModeToggle />
-					</div>
-					{children}
+					<SidebarProvider defaultOpen={false}>
+						<AppSidebar />
+						<main>
+							<SidebarTrigger />
+							{children}
+						</main>
+					</SidebarProvider>
 				</ThemeProvider>
 				<ScrollRestoration />
 				<Scripts />
