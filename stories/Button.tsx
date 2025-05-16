@@ -1,24 +1,20 @@
 import { Button as CHButton } from "../app/components/ui/button";
 
 export interface ButtonProps {
-	/** Is this the principal call to action on the page? */
-	primary?: boolean;
-	/** What background color to use */
-	backgroundColor?: string;
-	/** How large should the button be? */
-	size?: "small" | "medium" | "large";
-	/** Button contents */
-	label: string;
+	variant?: "outline" | "secondary" | "ghost" | "link";
+	asChild?: boolean;
+	label: string | React.ReactNode;
+	size?: "icon";
 	/** Optional click handler */
 	onClick?: () => void;
+	disabled?: boolean;
 }
 
 /** Primary UI component for user interaction */
-export const Button = ({
-	primary = false,
-	size = "medium",
-	backgroundColor,
-	label,
-}: ButtonProps) => {
-	return <CHButton>{label}</CHButton>;
+export const Button = ({ variant, asChild, label }: ButtonProps) => {
+	return (
+		<CHButton variant={variant} asChild={asChild}>
+			{label}
+		</CHButton>
+	);
 };
