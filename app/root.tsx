@@ -8,6 +8,8 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
+import { ModeToggle } from "./components/mode-toggle";
+import { ThemeProvider } from "./components/theme-provider";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -33,7 +35,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Links />
 			</head>
 			<body>
-				{children}
+				<ThemeProvider defaultTheme="system" storageKey="ch-theme">
+					<div className="fixed top-0 right-0">
+						<ModeToggle />
+					</div>
+					{children}
+				</ThemeProvider>
 				<ScrollRestoration />
 				<Scripts />
 			</body>
