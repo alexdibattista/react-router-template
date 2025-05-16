@@ -22,7 +22,6 @@ export const Header = () => {
 					</NavigationMenuContent>
 				</NavigationMenuItem>
 			</NavigationMenuList>
-			<ModeToggle style={{ marginLeft: "5px" }} />
 		</NavigationMenu>
 	);
 };

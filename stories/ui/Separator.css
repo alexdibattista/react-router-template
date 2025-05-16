@@ -1,0 +1,18 @@
+/* Additional styling for Separator stories */
+.storybook-separator-container {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.storybook-vertical-separator-container {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* These styles are only for documentation purposes and don't affect the actual separator component */

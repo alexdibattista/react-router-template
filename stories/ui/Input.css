@@ -1,0 +1,16 @@
+/* Additional styling for Input stories */
+.storybook-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+  max-width: 100%;
+}
+
+.storybook-input-label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+/* These styles are only for documentation purposes and don't affect the actual input component */

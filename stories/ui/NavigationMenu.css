@@ -1,0 +1,19 @@
+/* Additional styling for NavigationMenu stories */
+.storybook-nav-container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.storybook-nav-example {
+  margin-bottom: 2rem;
+}
+
+.storybook-nav-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* These styles are only for documentation purposes and don't affect the actual navigation-menu component */

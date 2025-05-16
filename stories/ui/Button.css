@@ -1,0 +1,16 @@
+/* Additional styling for Button stories */
+.storybook-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.storybook-button-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* These styles are only for documentation purposes and don't affect the actual button component */
