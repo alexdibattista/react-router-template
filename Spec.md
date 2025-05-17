@@ -10,6 +10,8 @@ integrated
 - shadcn
 
 Not integrated
+- https://tanstack.com/table/v8
+- https://ui.shadcn.com/docs/components/table
 - design system
     - components
     - tailwind css

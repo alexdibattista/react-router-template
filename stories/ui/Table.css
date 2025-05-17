@@ -1,0 +1,40 @@
+/* Styles for Table stories */
+.storybook-table-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-demo-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-demo-status-indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+}
+
+.status-pending {
+  background-color: #f59e0b;
+}
+
+.status-processing {
+  background-color: #3b82f6;
+}
+
+.status-success {
+  background-color: #10b981;
+}
+
+.status-failed {
+  background-color: #ef4444;
+}
+
+.table-demo-amount {
+  font-family: monospace;
+  font-weight: 500;
+}
