@@ -104,6 +104,7 @@ export interface NavigationMenuLinkProps {
 	className?: string;
 	href?: string;
 	active?: boolean;
+	asChild?: boolean;
 }
 
 export const NavigationMenuLink = ({

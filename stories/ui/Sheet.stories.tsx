@@ -27,6 +27,7 @@ type Story = StoryObj<typeof meta>;
 export const Right: Story = {
 	args: {
 		trigger: <Button variant="outline">Open Right Sheet</Button>,
+		children: <></>,
 	},
 	render: (args) => {
 		const [open, setOpen] = useState(false);
@@ -71,6 +72,7 @@ export const Right: Story = {
 export const Left: Story = {
 	args: {
 		trigger: <Button variant="outline">Open Left Sheet</Button>,
+		children: <></>,
 	},
 	render: (args) => {
 		const [open, setOpen] = useState(false);
@@ -110,6 +112,7 @@ export const Left: Story = {
 export const Top: Story = {
 	args: {
 		trigger: <Button variant="outline">Open Top Sheet</Button>,
+		children: <></>,
 	},
 	render: (args) => {
 		const [open, setOpen] = useState(false);
@@ -152,6 +155,7 @@ export const Top: Story = {
 export const Bottom: Story = {
 	args: {
 		trigger: <Button variant="outline">Open Bottom Sheet</Button>,
+		children: <></>,
 	},
 	render: (args) => {
 		const [open, setOpen] = useState(false);
@@ -182,6 +186,7 @@ export const Bottom: Story = {
 									strokeLinejoin="round"
 									className="h-4 w-4"
 									aria-label="Previous"
+									role="img"
 								>
 									<polygon points="19 20 9 12 19 4 19 20" />
 									<line x1="5" y1="19" x2="5" y2="5" />
@@ -198,6 +203,7 @@ export const Bottom: Story = {
 									strokeLinejoin="round"
 									className="h-4 w-4"
 									aria-label="Next"
+									role="img"
 								>
 									<polygon points="5 4 15 12 5 20 5 4" />
 									<line x1="19" y1="5" x2="19" y2="19" />
@@ -214,6 +220,7 @@ export const Bottom: Story = {
 									strokeLinejoin="round"
 									className="h-4 w-4"
 									aria-label="Play"
+									role="img"
 								>
 									<polygon points="5 3 19 12 5 21 5 3" />
 								</svg>

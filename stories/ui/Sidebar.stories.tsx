@@ -34,7 +34,7 @@ const meta = {
 	title: "UI/Sidebar",
 	component: SidebarProviderWrapper,
 	parameters: {
-		layout: "fullscreen",
+		layout: "centered",
 	},
 	tags: ["autodocs"],
 } satisfies Meta<typeof SidebarProviderWrapper>;
@@ -45,6 +45,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	args: {
 		defaultOpen: true,
+		children: <></>,
 	},
 	render: (args) => {
 		return (
@@ -134,6 +135,7 @@ export const Default: Story = {
 export const WithSearch: Story = {
 	args: {
 		defaultOpen: true,
+		children: <></>,
 	},
 	render: (args) => {
 		return (
@@ -207,6 +209,7 @@ export const WithSearch: Story = {
 export const Collapsible: Story = {
 	args: {
 		defaultOpen: false,
+		children: <></>,
 	},
 	render: (args) => {
 		const [open, setOpen] = useState(false);

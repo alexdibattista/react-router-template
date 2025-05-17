@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { cn } from "../../app/lib/utils";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -23,8 +22,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-	render: () => (
-		<NavigationMenu>
+	args: {
+		children: <></>,
+	},
+	render: (args) => (
+		<NavigationMenu {...args}>
 			<NavigationMenuList>
 				<NavigationMenuItem>
 					<NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
@@ -118,6 +120,9 @@ export const Default: Story = {
 };
 
 export const Simple: Story = {
+	args: {
+		children: <></>,
+	},
 	render: () => (
 		<NavigationMenu>
 			<NavigationMenuList>
