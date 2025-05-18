@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import { expect, fn, userEvent, waitFor, within } from "@storybook/test";
 import { Loader2, Moon } from "lucide-react";
 import { Button } from "./Button";
 
@@ -37,6 +37,12 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	args: {
 		children: "Button",
+		onClick: fn(),
+	},
+	play: async ({ args, canvasElement }) => {
+		const canvas = within(canvasElement);
+		await userEvent.click(canvas.getByRole("button"));
+		await waitFor(() => expect(args.onClick).toHaveBeenCalled());
 	},
 };
 

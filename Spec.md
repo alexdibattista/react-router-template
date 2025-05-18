@@ -8,15 +8,16 @@ integrated
 - storybook
 - tailwind
 - shadcn
+- design system
+    - components
+    - tailwind css
+    - shadcn/u
+    - radix ui
+    - typography
 
 Not integrated
 - https://tanstack.com/table/v8
 - https://ui.shadcn.com/docs/components/table
-- design system
-    - components
-    - tailwind css
-    - shadcn/ui
-    - radix ui
 - husky
 - Testing
     - Jest
