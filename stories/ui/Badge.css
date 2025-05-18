@@ -1,0 +1,60 @@
+/* Styles for Badge stories */
+.badge-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.badge-section {
+  margin-bottom: 1rem;
+}
+
+.badge-section-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--muted-foreground);
+}
+
+.badge-interactive {
+  cursor: pointer;
+}
+
+.badge-with-dot .badge-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.badge-dot-green {
+  background-color: #10b981;
+}
+
+.badge-dot-red {
+  background-color: #ef4444;
+}
+
+.badge-dot-blue {
+  background-color: #3b82f6;
+}
+
+.badge-dot-yellow {
+  background-color: #f59e0b;
+}
+
+/* Theme styles can be overridden in dark mode */
+:root.dark .badge-container {
+  background-color: var(--background);
+}

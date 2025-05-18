@@ -1,0 +1,33 @@
+/* Styles for Breadcrumb stories */
+.breadcrumb-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.breadcrumb-demo {
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--muted-foreground);
+}
+
+.breadcrumb-custom-separator {
+  color: var(--muted-foreground);
+  margin: 0 0.25rem;
+}
+
+.breadcrumb-with-icons .breadcrumb-icon {
+  margin-right: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Theme styles can be overridden in dark mode */
+:root.dark .breadcrumb-container {
+  background-color: var(--background);
+}

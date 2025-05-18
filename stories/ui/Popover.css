@@ -1,0 +1,62 @@
+.popover-demo {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popover-trigger {
+  cursor: pointer;
+}
+
+.popover-content {
+  width: 250px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popover-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.popover-description {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.75rem;
+}
+
+.popover-section {
+  padding: 0.75rem 0;
+  border-top: 1px solid hsl(var(--border));
+  margin-top: 0.75rem;
+}
+
+.popover-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.popover-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.popover-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Dark mode adjustments */
+:root.dark .popover-content {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

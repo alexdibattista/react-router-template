@@ -1,0 +1,91 @@
+.hover-card-demo {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.hover-card-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hover-card-content {
+  width: 300px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-hover-card {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.user-title {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.user-description {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.user-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.user-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.user-stat-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.user-stat-label {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Dark mode adjustments */
+:root.dark .hover-card-content {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

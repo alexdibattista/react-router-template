@@ -1,0 +1,71 @@
+/* Styles for Alert stories */
+.alert-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.alert-demo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-demo-title {
+  font-weight: 500;
+}
+
+.alert-demo-description {
+  margin-top: 0.25rem;
+  line-height: 1.5;
+}
+
+/* Theme styles can be overridden in dark mode */
+:root.dark .alert-container {
+  background-color: var(--background);
+}
+
+.alert {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid;
+  gap: 0.5rem;
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--border));
+}
+
+.alert-default {
+  border-color: hsl(var(--primary));
+}
+
+.alert-destructive {
+  border-color: hsl(var(--destructive));
+}
+
+.alert-icon {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.25rem;
+}
+
+.alert-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.alert-title {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.alert-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}

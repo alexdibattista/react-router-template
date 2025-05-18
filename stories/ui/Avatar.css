@@ -1,0 +1,79 @@
+/* Styles for Avatar stories */
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-small {
+  width: 24px;
+  height: 24px;
+}
+
+.avatar-medium {
+  width: 32px;
+  height: 32px;
+}
+
+.avatar-large {
+  width: 48px;
+  height: 48px;
+}
+
+.avatar-xlarge {
+  width: 64px;
+  height: 64px;
+}
+
+.avatar-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--background);
+}
+
+.avatar-status-online {
+  background-color: #10b981; /* green */
+}
+
+.avatar-status-offline {
+  background-color: #6b7280; /* gray */
+}
+
+.avatar-status-away {
+  background-color: #f59e0b; /* amber */
+}
+
+.avatar-status-busy {
+  background-color: #ef4444; /* red */
+}
+
+.avatar-large .avatar-status,
+.avatar-xlarge .avatar-status {
+  width: 10px;
+  height: 10px;
+}
+
+.avatar-label {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: var(--muted-foreground);
+  text-align: center;
+}
