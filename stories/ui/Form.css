@@ -1,0 +1,96 @@
+/* Form component specific styles for Storybook */
+
+.form-story-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+}
+
+.form-story-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.form-story-grid-full {
+  grid-column: 1 / -1;
+}
+
+.form-story-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.form-story-server-error {
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: rgb(254 226 226);
+  color: rgb(185 28 28);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.form-story-success {
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: rgb(220 252 231);
+  color: rgb(22 101 52);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.form-story-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-story-loading-spinner {
+  height: 1rem;
+  width: 1rem;
+  animation: spin 1s linear infinite;
+  border: 2px solid var(--muted);
+  border-top-color: var(--primary);
+  border-radius: 9999px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-story-dark {
+  background-color: hsl(224 71% 4%);
+  color: hsl(213 31% 91%);
+}
+
+.form-story-dark .form-item {
+  border-color: hsl(215 27.9% 16.9%);
+}
+
+.form-story-dark input,
+.form-story-dark select,
+.form-story-dark textarea {
+  background-color: hsl(224 71% 4%);
+  color: hsl(213 31% 91%);
+  border-color: hsl(215 27.9% 16.9%);
+}
+
+.required-field::after {
+  content: "*";
+  color: rgb(220 38 38);
+  margin-left: 0.25rem;
+}
