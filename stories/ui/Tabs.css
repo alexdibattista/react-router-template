@@ -1,0 +1,179 @@
+/* Tabs component styles for Storybook */
+
+.tabs-story-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.tabs-story-section {
+  margin-bottom: 2rem;
+}
+
+.tabs-story-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tabs-story-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.tabs-story-card {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tabs-story-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tabs-story-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.tabs-story-panel {
+  padding: 1.5rem;
+  background-color: var(--card);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.tabs-story-info {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.tabs-story-code {
+  font-family: monospace;
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  background-color: var(--muted);
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.tabs-story-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+}
+
+.tabs-story-dark {
+  background-color: hsl(224 71% 4%);
+  color: hsl(213 31% 91%);
+}
+
+.tabs-story-vertical {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.tabs-story-vertical .tabs-story-tabs-list {
+  flex-direction: column;
+}
+
+.tabs-story-variant-underline .tabs-list {
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  background: transparent;
+}
+
+.tabs-story-variant-underline .tabs-trigger {
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+}
+
+.tabs-story-variant-underline .tabs-trigger[data-state="active"] {
+  background: transparent;
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.tabs-story-variant-pills .tabs-list {
+  background: transparent;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.tabs-story-variant-pills .tabs-trigger {
+  background-color: var(--muted);
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.tabs-story-variant-pills .tabs-trigger[data-state="active"] {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.tabs-story-variant-boxed .tabs-list {
+  background: transparent;
+  padding: 0;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.tabs-story-variant-boxed .tabs-trigger {
+  border-radius: 0;
+  border: none;
+  border-right: 1px solid var(--border);
+}
+
+.tabs-story-variant-boxed .tabs-trigger:last-child {
+  border-right: none;
+}
+
+.tabs-story-card-content {
+  padding: 1rem;
+}
+
+.tabs-story-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tabs-story-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .tabs-story-vertical {
+    flex-direction: column;
+  }
+
+  .tabs-story-vertical .tabs-story-tabs-list {
+    flex-direction: row;
+  }
+}

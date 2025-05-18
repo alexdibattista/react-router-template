@@ -1,0 +1,252 @@
+/* Chart component styles for Storybook */
+
+.chart-story-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.chart-story-section {
+  margin-bottom: 2rem;
+}
+
+.chart-story-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.chart-story-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.chart-story-card {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-story-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chart-story-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-story-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.chart-story-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.chart-story-tab {
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.chart-story-tab:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: -2px;
+}
+
+.chart-story-tab[data-active="true"] {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+.chart-story-dark {
+  background-color: hsl(224 71% 4%);
+  color: hsl(213 31% 91%);
+}
+
+.chart-story-info {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.chart-story-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.chart-story-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.chart-story-legend-color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+}
+
+.chart-story-tooltip {
+  padding: 0.75rem;
+  background-color: var(--popover);
+  border-radius: 0.375rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+}
+
+.chart-story-tooltip-title {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.chart-story-tooltip-value {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chart-story-responsive {
+  aspect-ratio: 16/9;
+  width: 100%;
+  max-height: 400px;
+  min-height: 250px;
+}
+
+.chart-story-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-story-stat-card {
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+}
+
+.chart-story-stat-title {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.chart-story-stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.chart-story-stat-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 0.75rem;
+}
+
+.chart-story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .chart-story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mock chart styles for visualization */
+.chart-story-mock-chart {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chart-story-mock-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 200px;
+  margin-top: auto;
+}
+
+.chart-story-mock-bar {
+  width: 30px;
+  background-color: var(--primary);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.chart-story-mock-line {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+}
+
+.chart-story-mock-point {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.chart-story-mock-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--primary/20), transparent);
+}
+
+.chart-story-mock-line-path {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.chart-story-mock-axis {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.chart-story-mock-label {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  text-align: center;
+}

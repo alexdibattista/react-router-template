@@ -17,3 +17,170 @@
 }
 
 /* These styles are only for documentation purposes and don't affect the actual navigation-menu component */
+
+/* NavigationMenu component styles for Storybook */
+
+.navigation-menu-story-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.navigation-menu-story-section {
+  margin-bottom: 2rem;
+}
+
+.navigation-menu-story-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.navigation-menu-story-card {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.navigation-menu-story-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.navigation-menu-story-dark {
+  background-color: hsl(224 71% 4%);
+  color: hsl(213 31% 91%);
+}
+
+.navigation-menu-story-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navigation-menu-list-item {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navigation-menu-list-demo {
+  max-width: 32rem;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-menu-demo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.navigation-menu-content-list {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.navigation-menu-content-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.navigation-menu-content-card-title {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.navigation-menu-content-card-description {
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+  line-height: 1.4;
+}
+
+.navigation-menu-link-title {
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.navigation-menu-link-text {
+  color: var(--muted-foreground);
+  line-height: 1.4;
+  font-size: 0.875rem;
+}
+
+.navigation-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.navigation-menu-inline {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.navigation-menu-viewports {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.navigation-menu-mobile {
+  max-width: 320px;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.navigation-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.navigation-menu-tabs {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.navigation-menu-tab {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  flex: 1;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.navigation-menu-tab-active {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}

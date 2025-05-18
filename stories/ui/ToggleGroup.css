@@ -1,0 +1,128 @@
+/* ToggleGroup component styles for Storybook */
+
+.toggle-group-story-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.toggle-group-story-section {
+  margin-bottom: 2rem;
+}
+
+.toggle-group-story-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.toggle-group-story-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.toggle-group-story-card {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-group-story-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.toggle-group-story-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.toggle-group-story-info {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.toggle-group-story-variants {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.toggle-group-story-variant-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.toggle-group-story-variant-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  width: 100px;
+}
+
+.toggle-group-story-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-group-story-label-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-group-story-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--muted);
+}
+
+.toggle-group-story-preview {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px dashed var(--border);
+  background-color: var(--card);
+}
+
+.toggle-group-story-preview-content {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-group-story-dark {
+  background-color: hsl(224 71% 4%);
+  color: hsl(213 31% 91%);
+}
+
+@media (max-width: 640px) {
+  .toggle-group-story-variant-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .toggle-group-story-variant-label {
+    width: 100%;
+  }
+}
