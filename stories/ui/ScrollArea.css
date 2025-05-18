@@ -1,0 +1,218 @@
+/* ScrollArea component styles for Storybook */
+
+.scroll-area-story-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.scroll-area-story-section {
+  margin-bottom: 2rem;
+}
+
+.scroll-area-story-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.scroll-area-story-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.scroll-area-demo {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background-color: var(--card);
+}
+
+.scroll-area-vertical {
+  height: 300px;
+  width: 100%;
+}
+
+.scroll-area-horizontal {
+  height: auto;
+  width: 100%;
+}
+
+.scroll-area-bidirectional {
+  height: 300px;
+  width: 100%;
+}
+
+.scroll-area-card {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scroll-area-content {
+  padding: 1rem;
+}
+
+.scroll-area-content p {
+  margin-bottom: 1rem;
+}
+
+.scroll-area-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.scroll-area-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.scroll-area-tab {
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.scroll-area-tab:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: -2px;
+}
+
+.scroll-area-tab[data-active="true"] {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+.scroll-area-horizontal-content {
+  display: inline-flex;
+  padding: 1rem;
+  min-width: 1000px;
+}
+
+.scroll-area-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  min-width: 100%;
+}
+
+.scroll-area-image-card {
+  border-radius: 0.375rem;
+  overflow: hidden;
+  background-color: var(--muted);
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.scroll-area-image-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.scroll-area-table-container {
+  min-width: 1000px;
+}
+
+.scroll-area-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scroll-area-table th,
+.scroll-area-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.scroll-area-table th {
+  font-weight: 600;
+  background-color: var(--muted);
+}
+
+.scroll-area-table tr:last-child td {
+  border-bottom: none;
+}
+
+.scroll-area-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.scroll-area-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.scroll-area-dark {
+  background-color: hsl(224 71% 4%);
+  color: hsl(213 31% 91%);
+}
+
+.scroll-area-info {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.scroll-area-code {
+  padding: 1rem;
+  background-color: var(--card);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  font-family: monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.scroll-area-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.scroll-area-item:last-child {
+  border-bottom: none;
+}
+
+.scroll-area-images {
+  display: flex;
+  gap: 1rem;
+}
+
+.scroll-area-image {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 150px;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  background-color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

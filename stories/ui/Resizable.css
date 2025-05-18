@@ -1,0 +1,286 @@
+/* Resizable component styles for Storybook */
+
+.resizable-story-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.resizable-story-section {
+  margin-bottom: 2rem;
+}
+
+.resizable-story-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.resizable-story-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.resizable-demo {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  margin-bottom: 1.5rem;
+}
+
+.resizable-demo-horizontal {
+  height: 400px;
+  width: 100%;
+}
+
+.resizable-demo-vertical {
+  height: 500px;
+  width: 100%;
+}
+
+.resizable-demo-nested {
+  height: 500px;
+  width: 100%;
+}
+
+.resizable-demo-code {
+  height: 400px;
+  width: 100%;
+}
+
+.resizable-panel-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.resizable-panel-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  background-color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.resizable-panel-container {
+  background-color: var(--background);
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.resizable-panel-container.dark {
+  background-color: hsl(224 71% 4%);
+  color: hsl(213 31% 91%);
+}
+
+.resizable-panel-content p {
+  margin-bottom: 1rem;
+}
+
+.resizable-panel-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.resizable-file-tree {
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.resizable-file-tree-item {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resizable-file-tree-item:hover {
+  background-color: var(--muted);
+}
+
+.resizable-file-tree-item.active {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.resizable-file-tree-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.resizable-code-editor {
+  height: 100%;
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  background-color: var(--code);
+  overflow: auto;
+  color: var(--code-foreground);
+  white-space: pre;
+  tab-size: 2;
+}
+
+.resizable-code-preview {
+  height: 100%;
+  padding: 1rem;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card);
+}
+
+.resizable-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+
+.resizable-tab {
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.resizable-tab:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: -2px;
+}
+
+.resizable-tab[data-active="true"] {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+.resizable-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.resizable-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.resizable-layout-direction {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.resizable-direction-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.resizable-direction-option[data-active="true"] {
+  border-color: var(--primary);
+  background-color: var(--primary/10);
+}
+
+.resizable-card {
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.resizable-card-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+
+.resizable-card-content {
+  padding: 1rem;
+  overflow: auto;
+  flex: 1;
+}
+
+.resizable-mobile-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.resizable-mobile-header {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background);
+}
+
+.resizable-mobile-content {
+  flex: 1;
+  overflow: auto;
+}
+
+.resizable-chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.resizable-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.resizable-chat-input {
+  border-top: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.resizable-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.resizable-button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
