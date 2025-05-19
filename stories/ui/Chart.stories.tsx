@@ -302,7 +302,13 @@ const MockDoughnutChart = ({
 
 	return (
 		<div style={{ width: size, height: size, margin: "0 auto" }}>
-			<svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+			<svg
+				width={size}
+				height={size}
+				viewBox={`0 0 ${size} ${size}`}
+				aria-label="Doughnut chart"
+				role="img"
+			>
 				{paths.map((path, index) => (
 					<path
 						key={index}

@@ -129,8 +129,8 @@ export const Default: Story = {
 										<ContextMenuRadioItem value="pedro">
 											Pedro Duarte
 										</ContextMenuRadioItem>
-										<ContextMenuRadioItem value="colm">
-											Colm Tuite
+										<ContextMenuRadioItem value="sanders">
+											Sanders Sanderson
 										</ContextMenuRadioItem>
 									</ContextMenuRadioGroup>
 								</ContextMenuContent>

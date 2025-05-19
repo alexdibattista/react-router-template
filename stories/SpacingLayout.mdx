@@ -1,0 +1,168 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Spacing & Layout" />
+
+# Spacing & Layout
+
+Our spacing and layout system is built on Tailwind CSS principles, providing a consistent and responsive approach to component spacing, positioning, and overall layout.
+
+## Spacing Scale
+
+We use Tailwind's spacing scale which follows a consistent pattern:
+
+| Class | Size (px) | Size (rem) | Description |
+| :---- | :-------: | :--------: | :---------- |
+| `p-0` | 0px | 0rem | No padding |
+| `p-0.5` | 2px | 0.125rem | Extra extra small padding |
+| `p-1` | 4px | 0.25rem | Extra small padding |
+| `p-2` | 8px | 0.5rem | Small padding |
+| `p-3` | 12px | 0.75rem | Medium small padding |
+| `p-4` | 16px | 1rem | Medium padding |
+| `p-5` | 20px | 1.25rem | Medium large padding |
+| `p-6` | 24px | 1.5rem | Large padding |
+| `p-8` | 32px | 2rem | Extra large padding |
+| `p-10` | 40px | 2.5rem | Extra extra large padding |
+| `p-12` | 48px | 3rem | Extra extra extra large padding |
+| `p-16` | 64px | 4rem | Huge padding |
+
+> The same scale applies to margin (`m-*`), gap (`gap-*`), and other spacing utilities.
+
+## Spacing Utilities
+
+### Padding
+
+- `p-{size}`: All sides
+- `px-{size}`: Horizontal (left and right)
+- `py-{size}`: Vertical (top and bottom)
+- `pt-{size}`: Top only
+- `pr-{size}`: Right only
+- `pb-{size}`: Bottom only
+- `pl-{size}`: Left only
+
+### Margin
+
+- `m-{size}`: All sides
+- `mx-{size}`: Horizontal (left and right)
+- `my-{size}`: Vertical (top and bottom)
+- `mt-{size}`: Top only
+- `mr-{size}`: Right only
+- `mb-{size}`: Bottom only
+- `ml-{size}`: Left only
+- `mx-auto`: Horizontal centering
+
+### Gap
+
+- `gap-{size}`: Gap in both directions
+- `gap-x-{size}`: Horizontal gap
+- `gap-y-{size}`: Vertical gap
+
+## Layout System
+
+### Container
+
+The `container` class centers content with reasonable max-width constraints at each breakpoint:
+
+```jsx
+<div className="container mx-auto px-4">
+  {/* Content goes here */}
+</div>
+```
+
+### Responsive Breakpoints
+
+| Breakpoint | Class prefix | Minimum width |
+| :--- | :--- | :---: |
+| Mobile | (default) | 0px |
+| SM | `sm:` | 640px |
+| MD | `md:` | 768px |
+| LG | `lg:` | 1024px |
+| XL | `xl:` | 1280px |
+| 2XL | `2xl:` | 1536px |
+
+Use these breakpoints with any utility class:
+
+```jsx
+<div className="p-2 md:p-4 lg:p-6">
+  {/* Padding increases at larger screen sizes */}
+</div>
+```
+
+### Flexbox
+
+Basic flex containers:
+
+```jsx
+<div className="flex">
+  {/* Row of items (default) */}
+</div>
+
+<div className="flex flex-col">
+  {/* Column of items */}
+</div>
+```
+
+Alignment utilities:
+
+- `items-start`, `items-center`, `items-end`: Align items on cross axis
+- `justify-start`, `justify-center`, `justify-end`, `justify-between`: Align items on main axis
+- `flex-wrap`, `flex-nowrap`: Control wrapping behavior
+- `flex-grow`, `flex-shrink`: Control how items grow/shrink
+- `flex-1`, `flex-auto`, `flex-initial`, `flex-none`: Shorthand flex properties
+
+### Grid System
+
+Basic grid examples:
+
+```jsx
+<div className="grid grid-cols-2 gap-4">
+  {/* 2-column grid with 16px gaps */}
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {/* Responsive grid: 1 column on mobile, 2 on tablet, 3 on desktop */}
+</div>
+```
+
+Grid column utilities:
+- `grid-cols-{n}`: Define number of columns (1-12)
+- `col-span-{n}`: Make an item span multiple columns
+- `col-start-{n}`, `col-end-{n}`: Position items precisely
+
+### Spacing Best Practices
+
+1. **Be Consistent**: Use the spacing scale consistently rather than arbitrary values
+2. **Build Outward**: Start with inner elements and work outward when applying spacing
+3. **Responsive Adjustments**: Increase spacing proportionally on larger screens
+4. **Component Spacing**: Let container elements handle the spacing between components
+5. **Use Gap**: Prefer `gap` for consistent spacing between grid/flex items instead of margins
+
+## Examples
+
+### Card Grid Layout
+
+```jsx
+<div className="container mx-auto px-4 py-8">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="bg-white rounded-lg shadow p-6">
+      <h3 className="text-lg font-medium mb-2">Card Title</h3>
+      <p className="text-gray-600">Card content goes here</p>
+    </div>
+    {/* Repeat cards */}
+  </div>
+</div>
+```
+
+### Two-Column Layout
+
+```jsx
+<div className="container mx-auto px-4 py-8">
+  <div className="flex flex-col md:flex-row gap-8">
+    <div className="md:w-1/3">
+      <div className="bg-gray-100 p-6 rounded-lg">Sidebar content</div>
+    </div>
+    <div className="md:w-2/3">
+      <div className="bg-white p-6 rounded-lg">Main content</div>
+    </div>
+  </div>
+</div>
+```

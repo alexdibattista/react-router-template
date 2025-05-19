@@ -1,0 +1,92 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Accessibility" />
+
+# Accessibility Guidelines
+
+Accessibility is a core principle of our design system. We strive to ensure all components are usable by everyone, regardless of abilities or disabilities.
+
+## Accessibility Tab
+
+All component stories include an **Accessibility** tab that automatically runs accessibility checks and displays results in three categories:
+
+- **Violations**: Issues that must be fixed to meet accessibility standards
+- **Passes**: Successfully implemented accessibility features
+- **Incomplete**: Areas that require manual testing or further verification
+
+This tab is powered by the axe-core accessibility testing engine and helps identify common issues during development.
+
+## Core Principles
+
+### Keyboard Navigation
+
+- All interactive elements must be accessible via keyboard
+- Focus states must be visible and distinct
+- Tab order should follow a logical flow
+- Keyboard shortcuts should not conflict with assistive technologies
+
+### Screen Reader Support
+
+- All images require descriptive alt text
+- Form elements must have associated labels
+- ARIA attributes should be used appropriately where native semantics are insufficient
+- Dynamic content changes should be announced to screen readers
+
+### Color and Contrast
+
+- Text must have a minimum contrast ratio of 4.5:1 against its background (3:1 for large text)
+- Color alone should never be used to convey information
+- Interactive elements should have distinct focus and hover states
+- Test components in both light and dark modes
+
+### Content Structure
+
+- Use semantic HTML elements (`<button>`, `<nav>`, `<header>`, etc.)
+- Headings should follow a logical hierarchy (h1, h2, etc.)
+- Group related form elements with `<fieldset>` and `<legend>`
+- Use lists (`<ul>`, `<ol>`) for sequential or related items
+
+## Implementation Guidelines
+
+```jsx
+// ❌ Inaccessible example
+<div onClick={handleClick}>Click me</div>
+
+// ✅ Accessible example
+<button onClick={handleClick}>Click me</button>
+```
+
+```jsx
+// ❌ Missing label
+<input type="text" />
+
+// ✅ With proper labeling
+<label htmlFor="username">Username</label>
+<input id="username" type="text" />
+```
+
+## WCAG Compliance
+
+Our components aim to meet [WCAG 2.1 AA standards](https://www.w3.org/WAI/WCAG21/quickref/), which include:
+
+- **Perceivable**: Information must be presentable in ways all users can perceive
+- **Operable**: User interface and navigation must be operable by everyone
+- **Understandable**: Information and operation must be understandable
+- **Robust**: Content must be robust enough to work with various assistive technologies
+
+## Testing Requirements
+
+To ensure accessibility:
+
+1. Test with the Accessibility tab in each story
+2. Perform keyboard-only navigation testing
+3. Test with screen readers (VoiceOver, NVDA, JAWS)
+4. Verify color contrast using the provided tools
+5. Test at various zoom levels (up to 200%)
+
+## Resources
+
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [WCAG 2.1 Guidelines](https://www.w3.org/TR/WCAG21/)
+- [The A11Y Project](https://www.a11yproject.com/)
+- [MDN Accessibility Guide](https://developer.mozilla.org/en-US/docs/Web/Accessibility)

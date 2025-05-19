@@ -1,0 +1,236 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Icons" />
+
+# Icons
+
+Our application uses [Lucide React](https://lucide.dev/) for icons, providing a consistent, lightweight, and flexible icon system.
+
+## Basic Usage
+
+Import individual icons from the `lucide-react` package:
+
+```jsx
+import { Home, Settings, User, ChevronRight } from 'lucide-react';
+
+export function IconExample() {
+  return (
+    <div className="flex gap-4 items-center">
+      <Home />
+      <Settings />
+      <User />
+      <ChevronRight />
+    </div>
+  );
+}
+```
+
+## Icon Customization
+
+### Size
+
+Control icon size using the `size` prop or custom width/height:
+
+```jsx
+<div className="flex flex-col gap-4">
+  {/* Using size prop */}
+  <User size={16} /> {/* 16px */}
+  <User size={24} /> {/* 24px (default) */}
+  <User size={32} /> {/* 32px */}
+
+  {/* Using width/height props */}
+  <User width={40} height={40} />
+</div>
+```
+
+### Color
+
+Control icon color using the `color` prop or Tailwind classes:
+
+```jsx
+<div className="flex flex-col gap-4">
+  {/* Using color prop */}
+  <User color="currentColor" /> {/* Inherits from parent text color */}
+  <User color="#2563EB" /> {/* Using hex color */}
+
+  {/* Using Tailwind classes */}
+  <User className="text-primary" />
+  <User className="text-destructive" />
+  <User className="text-muted-foreground" />
+</div>
+```
+
+### Stroke Width
+
+Control line thickness using the `strokeWidth` prop:
+
+```jsx
+<div className="flex flex-col gap-4">
+  <User strokeWidth={1} /> {/* Thin */}
+  <User strokeWidth={1.5} /> {/* Default */}
+  <User strokeWidth={2} /> {/* Medium */}
+  <User strokeWidth={2.5} /> {/* Thick */}
+</div>
+```
+
+## Commonly Used Icons
+
+Here's a subset of commonly used icons in our application:
+
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+  {[
+    { name: 'Home', desc: 'Main navigation' },
+    { name: 'User', desc: 'User profile' },
+    { name: 'Settings', desc: 'Application settings' },
+    { name: 'Bell', desc: 'Notifications' },
+    { name: 'Search', desc: 'Search functionality' },
+    { name: 'Menu', desc: 'Menu toggle' },
+    { name: 'LogOut', desc: 'Sign out' },
+    { name: 'LogIn', desc: 'Sign in' },
+    { name: 'Plus', desc: 'Add item' },
+    { name: 'Edit', desc: 'Edit item' },
+    { name: 'Trash', desc: 'Delete item' },
+    { name: 'Check', desc: 'Success/completion' },
+    { name: 'X', desc: 'Close/cancel' },
+    { name: 'AlertCircle', desc: 'Warning/error' },
+    { name: 'ChevronDown', desc: 'Expand dropdown' },
+    { name: 'ChevronRight', desc: 'Navigate forward' },
+    { name: 'ChevronLeft', desc: 'Navigate back' },
+    { name: 'ExternalLink', desc: 'External link' },
+    { name: 'Calendar', desc: 'Date selection' },
+    { name: 'Clock', desc: 'Time selection' },
+    { name: 'Filter', desc: 'Filter content' },
+    { name: 'Download', desc: 'Download content' },
+    { name: 'Upload', desc: 'Upload content' },
+    { name: 'Clipboard', desc: 'Copy to clipboard' },
+  ].map(icon => (
+    <div key={icon.name} className="flex flex-col items-center text-center p-4 border rounded-md">
+      <div className="text-4xl mb-2">{`<${icon.name} />`}</div>
+      <div className="font-medium">{icon.name}</div>
+      <div className="text-sm text-muted-foreground">{icon.desc}</div>
+    </div>
+  ))}
+</div>
+
+For a complete list of available icons, visit the [Lucide Icons Gallery](https://lucide.dev/icons/).
+
+## Icon Button Component
+
+We frequently combine icons with buttons. Here's our standard pattern:
+
+```jsx
+import { Settings } from 'lucide-react';
+
+function IconButton() {
+  return (
+    <button
+      type="button"
+      className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+    >
+      <Settings className="h-5 w-5" aria-hidden="true" />
+      <span className="sr-only">Settings</span>
+    </button>
+  );
+}
+```
+
+## Icon with Text
+
+When combining icons with text, follow these patterns:
+
+```jsx
+import { Home, ChevronRight } from 'lucide-react';
+
+function IconWithText() {
+  return (
+    <div className="space-y-4">
+      {/* Icon before text */}
+      <div className="flex items-center gap-2">
+        <Home className="h-5 w-5" aria-hidden="true" />
+        <span>Dashboard</span>
+      </div>
+
+      {/* Icon after text */}
+      <div className="flex items-center gap-2">
+        <span>View details</span>
+        <ChevronRight className="h-4 w-4" aria-hidden="true" />
+      </div>
+    </div>
+  );
+}
+```
+
+## Accessibility Considerations
+
+Always ensure your icons are accessible:
+
+1. **Decorative Icons**: When an icon is purely decorative or accompanied by text that conveys the same meaning, add `aria-hidden="true"` to hide it from screen readers:
+
+```jsx
+<button>
+  <Home className="mr-2" aria-hidden="true" />
+  Home
+</button>
+```
+
+2. **Standalone Functional Icons**: When using an icon alone for a functional element (like a button), provide descriptive text with `sr-only` class for screen readers:
+
+```jsx
+<button aria-label="Settings">
+  <Settings aria-hidden="true" />
+  <span className="sr-only">Settings</span>
+</button>
+```
+
+3. **ARIA Labels**: If the icon conveys important information not available in text, use appropriate ARIA attributes:
+
+```jsx
+<AlertCircle aria-label="Warning: Your session will expire soon" />
+```
+
+## Best Practices
+
+1. **Be Consistent**: Use the same icon for the same action throughout the application
+2. **Keep It Simple**: Choose the simplest icon that clearly represents the action
+3. **Size Appropriately**: Use appropriate sizes for different contexts:
+   - Navigation icons: 24px
+   - Button icons: 16-20px
+   - Decorative icons: Varies based on context
+4. **Maintain Visual Weight**: Keep stroke width consistent (1.5-2 is recommended)
+5. **Provide Context**: Accompany icons with text when the meaning might be ambiguous
+6. **Use Color Sparingly**: Don't rely solely on color to convey meaning
+
+## Dynamic Icon Import
+
+For applications with many icons, consider dynamic imports to reduce bundle size:
+
+```jsx
+import dynamic from 'next/dynamic';
+import { LucideProps } from 'lucide-react';
+import dynamicIconImports from 'lucide-react/dynamicIconImports';
+
+interface IconProps extends LucideProps {
+  name: keyof typeof dynamicIconImports;
+}
+
+const Icon = ({ name, ...props }: IconProps) => {
+  const LucideIcon = dynamic(dynamicIconImports[name]);
+  return <LucideIcon {...props} />;
+};
+
+// Usage
+function App() {
+  return (
+    <div>
+      <Icon name="Home" />
+      <Icon name="Settings" color="blue" />
+    </div>
+  );
+}
+```
+
+## Further Resources
+
+- [Lucide React Documentation](https://lucide.dev/docs/lucide-react)
+- [Complete Icon List](https://lucide.dev/icons/)
+- [GitHub Repository](https://github.com/lucide-icons/lucide)
